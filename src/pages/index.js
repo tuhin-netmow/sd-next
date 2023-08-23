@@ -6,7 +6,7 @@ import HomeFacilities from '@/components/Home/home_facilities';
 import HomePricing from '@/components/Home/home_pricing';
 import HomeTestimonial from '@/components/Home/home_testimonial';
 import { items } from '@/data/data';
-import HomeLayout from '@/components/layouts/homeLayout'
+import RootLayout from '@/components/layouts/RootLayout'
 
 const  HomePage = () => {
   return (
@@ -25,5 +25,5 @@ const  HomePage = () => {
  export default HomePage
 
  HomePage.getLayout = function getLayout (page) {
-  return <HomeLayout>{page}</HomeLayout>
+  return <RootLayout>{page}</RootLayout>
  }
