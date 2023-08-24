@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../../../public/images/home/logo.png'
 import footerShape from '../../../../public/images/home/footer-shape.png'
+import footer_cta_img from '../../../../public/images/home/footer_cta_img.png'
 
 export default function Footer() {
   return (
@@ -19,7 +20,7 @@ export default function Footer() {
         <div className="footer-cta wow animate__animated animate__zoomIn">
             <div className="footer-cta-left">
                 <div className="icon-wrapper">
-                    <Image src="/images/home/footer_cta_img.png" width={64} height={64} alt="Footer CTA Image" />
+                    <Image src={footer_cta_img} width={64} height={64} alt="Footer CTA Image" />
                 </div>
                 <div className="footer-cta-text">
                     <p>Take your organization to the next level with Squad Deck</p>
