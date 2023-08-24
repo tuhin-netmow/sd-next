@@ -24,7 +24,7 @@ export default function Header() {
         <div className="container">
           <div className="header-bottom-content">
             <Link href="/" className="logo">
-              <Image
+              <Image  priority={true} 
                 src={logo}
                 // width={195}
                 // height={36}
@@ -108,13 +108,13 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/login" className="login-btn">
-                    <Image src={login} alt="Login" />
+                  <Link href="/auth/login" className="login-btn">
+                    <Image  priority={true}  src={login} alt="Login" />
                     <span>Login</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/register" className="btn-common btn-primary">
+                  <Link href="/auth/register" className="btn-common btn-primary">
                     <span>Register</span>
                   </Link>
                 </li>

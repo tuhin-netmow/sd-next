@@ -14,13 +14,14 @@ export default function Footer() {
     }
       `}</style>
     <div className="footer-shape">
-        <Image src={footerShape} alt="" />
+        <Image  priority={true}  src={footerShape} alt="" />
     </div>
     <div className="container">
         <div className="footer-cta wow animate__animated animate__zoomIn">
             <div className="footer-cta-left">
                 <div className="icon-wrapper">
-                    <Image src={footer_cta_img} width={64} height={64} alt="Footer CTA Image" />
+                    <Image  priority={true}  src={footer_cta_img} width={64} height={64} alt="Footer CTA Image" placeholder="blur"
+  blurDataURL={"../../../../public/images/home/footer_cta_img.png"} />
                 </div>
                 <div className="footer-cta-text">
                     <p>Take your organization to the next level with Squad Deck</p>
@@ -34,7 +35,7 @@ export default function Footer() {
             <div className="footer-top-content">
                 <div className="footer-top-about-info wow animate__animated animate__fadeIn" data-wow-delay="0.1s">
                    <Link href="/" className="footer-logo">
-                      <Image src={logo}  alt="footer logo" />
+                      <Image  priority={true}  src={logo}  alt="footer logo" />
                    </Link>
                     <div className="footer-about-text wow animate__animated animate__fadeIn">
                         <p>SquadDeck - The ultimate sports team organisation and squad management system. Easily manage your team, coaches, staff, guardians and players, while driving sales to your merchandise store with one intelligent software platform.     
@@ -156,10 +157,12 @@ export default function Footer() {
                 <div className="footer-app-links wow animate__animated animate__fadeIn" data-wow-delay=".3s">
                     <h5>Connect with apps:</h5>
                     <Link href="#">
-                      <Image src="/images/home/google-play.png" width={100} height={100} alt="Google Playstore" />
+                      <Image  priority={true}  src="/images/home/google-play.png" width={100} height={100} alt="Google Playstore" placeholder="blur"
+  blurDataURL={'/images/home/google-play.png'} />
                     </Link>
                     <Link href="#">
-                      <Image src="/images/home/appstore.png" width={100} height={100} alt="Appstore" />
+                      <Image  priority={true}  src="/images/home/appstore.png" width={100} height={100} alt="Appstore" placeholder="blur"
+  blurDataURL={'/images/home/appstore.png'} />
                     </Link>
                 </div>
             </div>
