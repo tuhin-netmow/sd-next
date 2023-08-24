@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.auth_bg_cover {
+  background: linear-gradient(-45deg,#9344E8 50%,#162A73);
+}
+
+.auth_bg_cover .bg_overlay {
+  background-image: url(../../../public/assets/images/cover-pattern.png);
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  background-color: transparent;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+}
+
+.auth_page_wrapper .auth_page_content {
+  padding-bottom: 60px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.auth_one_bg{
+  background-image: url(../../../public/assets/images/auth-one-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  background-color: transparent;
+}
+
+.card_overlay{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  opacity: .7;
+  background-color: #000;
+}
+
+.auth_one_bg .card_overlay{
+  background: -webkit-gradient(linear,left top,right top,from(#364574),to(#162A73));
+  background: linear-gradient(to right,#364574,#162A73);
+  opacity: .9;
+}
+
+.auth_page_wrapper .button{
+  background-color: var(--color--primary);
+  border-radius: .5rem;
+  border: 1px solid transparent;
+}
+
+.auth_page_wrapper h5{
+  color: var(--color--secondary);
+}
+
+.auth_page_wrapper .button:hover{
+  background-color:var(--color--secondary);
+}
+
+.text_primary{
+  color: var(--color--primary);
+}
