@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Hero() {
@@ -34,12 +35,12 @@ export default function Hero() {
                   className="sqdk-hero-btn-container wow animate__animated animate__fadeInUp"
                   data-wow-delay="1.5s"
                 >
-                  <a
+                  <Link
                     href="/register"
                     className="btn-common btn-primary btn-hero mt-btn"
                   >
                     Book A Free Demo Now
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

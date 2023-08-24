@@ -16,7 +16,7 @@ export default function HomeComparison() {
                       <div className="sd-card-heading">
                           <h3>Traditional Management System</h3>
                       </div>
-                      <Image src={cardimg1} alt="Card Image" />
+                      <Image  priority={true}  src={cardimg1} alt="Card Image" />
                       <ul>
                           <li>
                               <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +54,7 @@ export default function HomeComparison() {
                       <div className="sd-card-heading">
                           <h3>SquadDeck Management System</h3>
                       </div>
-                      <Image src={cardimg2} alt="Card Image" />
+                      <Image  priority={true}  src={cardimg2} alt="Card Image" />
                       <ul>
                           <li>
                               <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
