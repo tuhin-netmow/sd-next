@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import logo from '../../../../public/images/home/logo.png'
+import login from '../../../../public/images/home/login.png'
 
 export default function Header() {
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
@@ -23,9 +25,9 @@ export default function Header() {
           <div className="header-bottom-content">
             <Link href="/" className="logo">
               <Image
-                src="/images/home/logo.png"
-                width={195}
-                height={36}
+                src={logo}
+                // width={195}
+                // height={36}
                 alt="Squaddeck Logo"
               />
             </Link>
@@ -107,7 +109,7 @@ export default function Header() {
                 </li>
                 <li>
                   <Link href="/login" className="login-btn">
-                    <img src="images/home/login.png" alt="Login" />
+                    <Image src={login} alt="Login" />
                     <span>Login</span>
                   </Link>
                 </li>

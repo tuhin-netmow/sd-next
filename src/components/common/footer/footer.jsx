@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import logo from '../../../../public/images/home/logo.png'
+import footerShape from '../../../../public/images/home/footer-shape.png'
 
 export default function Footer() {
   return (
@@ -11,7 +13,7 @@ export default function Footer() {
     }
       `}</style>
     <div className="footer-shape">
-        <img src="images/home/footer-shape.png" alt="" />
+        <Image src={footerShape} alt="" />
     </div>
     <div className="container">
         <div className="footer-cta wow animate__animated animate__zoomIn">
@@ -31,7 +33,7 @@ export default function Footer() {
             <div className="footer-top-content">
                 <div className="footer-top-about-info wow animate__animated animate__fadeIn" data-wow-delay="0.1s">
                    <Link href="/" className="footer-logo">
-                      <Image src="/images/home/footer_logo.png" width={190} height={36} alt="footer logo" />
+                      <Image src={logo}  alt="footer logo" />
                    </Link>
                     <div className="footer-about-text wow animate__animated animate__fadeIn">
                         <p>SquadDeck - The ultimate sports team organisation and squad management system. Easily manage your team, coaches, staff, guardians and players, while driving sales to your merchandise store with one intelligent software platform.     
