@@ -10,7 +10,6 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
   const [confirmPasswordError, setConfirmPasswordError] = useState("");
   const [passwordShow, setPasswordShow] = useState(false);
 
-
   const handleStepsAndData = async () => {
     setEmailError("");
     setPasswordError("");
@@ -77,7 +76,7 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
       <div className="col-lg-6 fs-4 p-4">
         <div className="p-lg-5">
           <div>
-            <h5 className="quote-color fs-2 fw-bold">Register Account</h5>
+            <h5 className="fs-2 fw-bold">Register Account</h5>
             <p className="text-muted fs-5">
               Get your Free SquadDeck account now.
             </p>
@@ -108,7 +107,7 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
                 <div className="position-relative auth-pass-inputgroup">
                   <input
                     onChange={(e) => setPassword(e.target.value)}
-                    type={passwordShow ? "text": "password"}
+                    type={passwordShow ? "text" : "password"}
                     className="form-control pe-5 password-input mb-2 fs-4"
                     onPaste={(e) => e.preventDefault()}
                     placeholder="Enter password"
@@ -119,11 +118,16 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
                   <button
                     className="position-absolute end-0 top-0 text-decoration-none text-muted password-addon px-3"
                     type="button"
-                    id="password-addon"
-                    onClick={() => setPasswordShow(!passwordShow)} 
-                    style={{backgroundColor: "transparent"}}
+                    onClick={() => setPasswordShow(!passwordShow)}
+                    style={{ backgroundColor: "transparent" }}
                   >
-                    <i className={`${passwordShow ? "ri-eye-off-line align-middle" : "ri-eye-fill align-middle"}`}></i>
+                    <i
+                      className={`${
+                        passwordShow
+                          ? "ri-eye-off-line align-middle"
+                          : "ri-eye-fill align-middle"
+                      }`}
+                    ></i>
                   </button>
                   {passwordError && (
                     <span className="text-danger">{passwordError}</span>
@@ -148,10 +152,16 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
                   <button
                     className="position-absolute end-0 top-0 text-decoration-none text-muted px-3"
                     type="button"
-                    style={{backgroundColor: "transparent"}}
-                    onClick={() => setPasswordShow(!passwordShow)} 
+                    style={{ backgroundColor: "transparent" }}
+                    onClick={() => setPasswordShow(!passwordShow)}
                   >
-                    <i className={`${passwordShow ? "ri-eye-off-line align-middle" : "ri-eye-fill align-middle"}`}></i>
+                    <i
+                      className={`${
+                        passwordShow
+                          ? "ri-eye-off-line align-middle"
+                          : "ri-eye-fill align-middle"
+                      }`}
+                    ></i>
                   </button>
                   {confirmPasswordError && (
                     <span className="text-danger">{confirmPasswordError}</span>
