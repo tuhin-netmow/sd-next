@@ -4454,13 +4454,13 @@ a.scrolltop-btn {
   border-radius: 0 10rem 0 0;
 }
 
-.main-content {
+/* .main-content {
   width: calc(100% - 73.6rem);
   padding-block: 8.6rem;
   padding-inline: 1.5rem;
   position: relative;
   z-index: 9;
-}
+} */
 
 .signup_wrap .main-content {
   padding-block: 2rem;

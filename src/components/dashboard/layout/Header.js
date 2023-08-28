@@ -16,10 +16,13 @@ import LightDark from "../common/LightDark";
 import NotificationDropdown from "../common/NotificationDropdown";
 import ProfileDropdown from "../common/ProfileDropdown";
 
-import { useSelector, useDispatch } from "react-redux";
-import { createSelector } from "reselect";
+//import next
 import Link from "next/link";
 import Image from "next/image";
+
+//import from redux
+import { useSelector, useDispatch } from "react-redux";
+import { createSelector } from "reselect";
 import { changeSidebarVisibility } from "@/slices/thunks";
 
 const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {

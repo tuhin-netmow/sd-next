@@ -9,8 +9,7 @@ import RecentOrders from "../../components/dashboard/home/RecentOrders";
 import Section from "../../components/dashboard/home/Section";
 import StoreVisits from "../../components/dashboard/home/StoreVisits";
 import TopSellers from "../../components/dashboard/home/TopSellers";
-import DashboardLayout from '../../components/dashboard/layout/index'
-
+import DashboardLayout from "../../components/dashboard/layout/index";
 
 const DashboardEcommerce = () => {
   // document.title = "Dashboard | Velzon - React Admin & Dashboard Template";
