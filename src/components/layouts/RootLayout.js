@@ -1,7 +1,8 @@
-import React from 'react'
-import Head from 'next/head';
-import Header from '../common/header/header';
-import Footer from '../common/footer/footer';
+// ;
+import React from "react";
+import Head from "next/head";
+import Header from "../Header/header";
+import Footer from "../footer/footer";
 
 export default function Layout({ children }) {
   const websiteTitle = "Squaddeck - Sports Club Management Software";
@@ -18,5 +19,5 @@ export default function Layout({ children }) {
       <main>{children}</main>
       <Footer />
     </div>
-  )
+  );
 }

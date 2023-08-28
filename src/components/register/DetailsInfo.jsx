@@ -1,7 +1,5 @@
-"use client";
 import { useRouter } from "next/navigation";
 import React, { useState, ChangeEvent } from "react";
-
 
 const DetailsInfo = ({ userInfo, setUserInfo }) => {
   const [organisation_name, setOrganizationName] = useState("");
