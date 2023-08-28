@@ -45,10 +45,6 @@ const Login = () => {
     // console.log(res);
   };
 
-  const getCurrentYear = () => {
-    const yearAndData = new Date().getFullYear();
-    return yearAndData;
-  };
   return (
     <>
       {/* <!-- auth-page wrapper --> */}
@@ -281,7 +277,7 @@ const Login = () => {
                 <div className="col-lg-12">
                   <div className="text-center">
                     <p className="mb-0 fs-2">
-                      &copy; {getCurrentYear()} SquadDeck. Crafted with{" "}
+                      &copy; {new Date().getFullYear()} SquadDeck. Crafted with{" "}
                       <i className="mdi mdi-heart text-danger"></i> by Netmow
                     </p>
                   </div>

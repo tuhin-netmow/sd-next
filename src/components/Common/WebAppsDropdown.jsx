@@ -36,7 +36,7 @@ const WebAppsDropdown = () => {
                 <h6 className="m-0 fw-semibold fs-15"> Web Apps </h6>
               </Col>
               <div className="col-auto">
-                <Link to="#" className="btn btn-sm btn-soft-info">
+                <Link href="#" className="btn btn-sm btn-soft-info">
                   {" "}
                   View All Apps
                   <i className="ri-arrow-right-s-line align-middle"></i>
@@ -48,19 +48,19 @@ const WebAppsDropdown = () => {
           <div className="p-2">
             <div className="row g-0">
               <Col>
-                <Link className="dropdown-icon-item" to="#">
+                <Link className="dropdown-icon-item" href="#">
                   <img src={github} alt="Github" />
                   <span>GitHub</span>
                 </Link>
               </Col>
               <Col>
-                <Link className="dropdown-icon-item" to="#">
+                <Link className="dropdown-icon-item" href="#">
                   <img src={bitbucket} alt="bitbucket" />
                   <span>Bitbucket</span>
                 </Link>
               </Col>
               <Col>
-                <Link className="dropdown-icon-item" to="#">
+                <Link className="dropdown-icon-item" href="#">
                   <img src={dribbble} alt="dribbble" />
                   <span>Dribbble</span>
                 </Link>
@@ -69,19 +69,19 @@ const WebAppsDropdown = () => {
 
             <div className="row g-0">
               <Col>
-                <Link className="dropdown-icon-item" to="#">
+                <Link className="dropdown-icon-item" href="#">
                   <img src={dropbox} alt="dropbox" />
                   <span>Dropbox</span>
                 </Link>
               </Col>
               <Col>
-                <Link className="dropdown-icon-item" to="#">
+                <Link className="dropdown-icon-item" href="#">
                   <img src={mail_chimp} alt="mail_chimp" />
                   <span>Mail Chimp</span>
                 </Link>
               </Col>
               <Col>
-                <Link className="dropdown-icon-item" to="#">
+                <Link className="dropdown-icon-item" href="#">
                   <img src={slack} alt="slack" />
                   <span>Slack</span>
                 </Link>

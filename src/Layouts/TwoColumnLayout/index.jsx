@@ -157,7 +157,7 @@ const TwoColumnLayout = (props) => {
           <Container fluid>
             <div id="two-column-menu">
               <SimpleBar className="twocolumn-iconview">
-                <Link to="#" className="logo">
+                <Link href="#" className="logo">
                   <Image src={logoSm} alt="" height="22" />
                 </Link>
                 {(navData || []).map((item, key) => (
@@ -167,7 +167,7 @@ const TwoColumnLayout = (props) => {
                         <li>
                           <Link
                             onClick={item.click}
-                            to="#"
+                            href="#"
                             subitems={item.id}
                             className="nav-icon"
                             data-bs-toggle="collapse"
@@ -179,7 +179,7 @@ const TwoColumnLayout = (props) => {
                         <>
                           <Link
                             onClick={item.click}
-                            to={item.link ? item.link : "/#"}
+                            href={item.link ? item.link : "/#"}
                             subitems={item.id}
                             className="nav-icon"
                             data-bs-toggle="collapse"
@@ -210,7 +210,7 @@ const TwoColumnLayout = (props) => {
                                 {!subItem.isChildItem ? (
                                   <li className="nav-item">
                                     <Link
-                                      to={subItem.link ? subItem.link : "/#"}
+                                      href={subItem.link ? subItem.link : "/#"}
                                       className="nav-link"
                                     >
                                       {props.t(subItem.label)}
@@ -232,7 +232,7 @@ const TwoColumnLayout = (props) => {
                                     <Link
                                       onClick={subItem.click}
                                       className="nav-link"
-                                      to="/#"
+                                      href="/#"
                                       data-bs-toggle="collapse"
                                     >
                                       {" "}
@@ -264,7 +264,7 @@ const TwoColumnLayout = (props) => {
                                                 key={key}
                                               >
                                                 <Link
-                                                  to={
+                                                  href={
                                                     childItem.link
                                                       ? childItem.link
                                                       : "/#"
@@ -294,7 +294,7 @@ const TwoColumnLayout = (props) => {
                                                             key={key}
                                                           >
                                                             <Link
-                                                              to={
+                                                              href={
                                                                 childItem.link
                                                                   ? childItem.link
                                                                   : "/#"

@@ -122,7 +122,7 @@ const NotificationDropdown = () => {
                       </span>
                     </div>
                     <div className="flex-grow-1">
-                      <Link to="#" className="stretched-link">
+                      <Link href="#" className="stretched-link">
                         <h6 className="mt-0 mb-2 lh-base">
                           Your <b>Elite</b> author Graphic Optimization{" "}
                           <span className="text-secondary">reward</span> is
@@ -162,7 +162,7 @@ const NotificationDropdown = () => {
                       alt="user-pic"
                     />
                     <div className="flex-grow-1">
-                      <Link to="#" className="stretched-link">
+                      <Link href="#" className="stretched-link">
                         <h6 className="mt-0 mb-1 fs-13 fw-semibold">
                           Angela Bernier
                         </h6>
@@ -205,7 +205,7 @@ const NotificationDropdown = () => {
                       </span>
                     </div>
                     <div className="flex-grow-1">
-                      <Link to="#" className="stretched-link">
+                      <Link href="#" className="stretched-link">
                         <h6 className="mt-0 mb-2 fs-13 lh-base">
                           You have received <b className="text-success">20</b>{" "}
                           new messages in the conversation
@@ -243,7 +243,7 @@ const NotificationDropdown = () => {
                       alt="user-pic"
                     />
                     <div className="flex-grow-1">
-                      <Link to="#" className="stretched-link">
+                      <Link href="#" className="stretched-link">
                         <h6 className="mt-0 mb-1 fs-13 fw-semibold">
                           Maureen Gibson
                         </h6>
@@ -299,7 +299,7 @@ const NotificationDropdown = () => {
                       alt="user-pic"
                     />
                     <div className="flex-grow-1">
-                      <Link to="#" className="stretched-link">
+                      <Link href="#" className="stretched-link">
                         <h6 className="mt-0 mb-1 fs-13 fw-semibold">
                           James Lemire
                         </h6>
@@ -341,7 +341,7 @@ const NotificationDropdown = () => {
                       alt="user-pic"
                     />
                     <div className="flex-grow-1">
-                      <Link to="#" className="stretched-link">
+                      <Link href="#" className="stretched-link">
                         <h6 className="mt-0 mb-1 fs-13 fw-semibold">
                           Angela Bernier
                         </h6>
@@ -384,7 +384,7 @@ const NotificationDropdown = () => {
                       alt="user-pic"
                     />
                     <div className="flex-grow-1">
-                      <Link to="#" className="stretched-link">
+                      <Link href="#" className="stretched-link">
                         <h6 className="mt-0 mb-1 fs-13 fw-semibold">
                           Kenneth Brown
                         </h6>
@@ -426,7 +426,7 @@ const NotificationDropdown = () => {
                       alt="user-pic"
                     />
                     <div className="flex-grow-1">
-                      <Link to="#" className="stretched-link">
+                      <Link href="#" className="stretched-link">
                         <h6 className="mt-0 mb-1 fs-13 fw-semibold">
                           Maureen Gibson
                         </h6>

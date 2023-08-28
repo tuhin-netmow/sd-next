@@ -122,7 +122,7 @@ const MyCartDropdown = () => {
                 </div>
                 <h5 className="mb-3">Your Cart is Empty!</h5>
                 <Link
-                  to="/apps-ecommerce-products"
+                  href="/apps-ecommerce-products"
                   className="btn btn-success w-md mb-3"
                 >
                   Shop Now
@@ -143,7 +143,7 @@ const MyCartDropdown = () => {
                     <div className="flex-grow-1">
                       <h6 className="mt-0 mb-1 fs-14">
                         <Link
-                          to="/apps-ecommerce-product-details"
+                          href="/apps-ecommerce-product-details"
                           className="text-reset"
                         >
                           {item.product}
@@ -194,7 +194,7 @@ const MyCartDropdown = () => {
             </div>
 
             <Link
-              to="/apps-ecommerce-checkout"
+              href="/apps-ecommerce-checkout"
               className="btn btn-success text-center w-100"
             >
               Checkout

@@ -133,7 +133,7 @@ const HorizontalLayout = (props) => {
                   <Link
                     onClick={item.click}
                     className="nav-link menu-link"
-                    to={item.link ? item.link : "/#"}
+                    href={item.link ? item.link : "/#"}
                     data-bs-toggle="collapse"
                   >
                     <i className={item.icon}></i>{" "}
@@ -160,7 +160,7 @@ const HorizontalLayout = (props) => {
                                     <ul className="nav nav-sm flex-column">
                                       <li className="nav-item">
                                         <Link
-                                          to={item.subItems[key].link}
+                                          href={item.subItems[key].link}
                                           className="nav-link"
                                         >
                                           {item.subItems[key].label}
@@ -173,7 +173,7 @@ const HorizontalLayout = (props) => {
                                     <ul className="nav nav-sm flex-column">
                                       <li className="nav-item">
                                         <Link
-                                          to={item.subItems[key].link}
+                                          href={item.subItems[key].link}
                                           className="nav-link"
                                         >
                                           {item.subItems[key].label}
@@ -194,7 +194,7 @@ const HorizontalLayout = (props) => {
                               {!subItem.isChildItem ? (
                                 <li className="nav-item">
                                   <Link
-                                    to={subItem.link ? subItem.link : "/#"}
+                                    href={subItem.link ? subItem.link : "/#"}
                                     className="nav-link"
                                   >
                                     {props.t(subItem.label)}
@@ -205,7 +205,7 @@ const HorizontalLayout = (props) => {
                                   <Link
                                     onClick={subItem.click}
                                     className="nav-link"
-                                    to="/#"
+                                    href="/#"
                                     data-bs-toggle="collapse"
                                   >
                                     {" "}
@@ -225,7 +225,7 @@ const HorizontalLayout = (props) => {
                                               {!subChildItem.isChildItem ? (
                                                 <li className="nav-item">
                                                   <Link
-                                                    to={
+                                                    href={
                                                       subChildItem.link
                                                         ? subChildItem.link
                                                         : "/#"
@@ -242,7 +242,7 @@ const HorizontalLayout = (props) => {
                                                   <Link
                                                     onClick={subChildItem.click}
                                                     className="nav-link"
-                                                    to="/#"
+                                                    href="/#"
                                                     data-bs-toggle="collapse"
                                                   >
                                                     {" "}
@@ -273,7 +273,7 @@ const HorizontalLayout = (props) => {
                                                               key={key}
                                                             >
                                                               <Link
-                                                                to={
+                                                                href={
                                                                   subSubChildItem.link
                                                                     ? subSubChildItem.link
                                                                     : "/#"
@@ -308,7 +308,7 @@ const HorizontalLayout = (props) => {
                 <li className="nav-item">
                   <Link
                     className="nav-link menu-link"
-                    to={item.link ? item.link : "/#"}
+                    href={item.link ? item.link : "/#"}
                   >
                     <i className={item.icon}></i>{" "}
                     <span>{props.t(item.label)}</span>

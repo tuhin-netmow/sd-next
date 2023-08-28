@@ -2,7 +2,7 @@
 import React from "react";
 import Head from "next/head";
 import Header from "../Header/header";
-import Footer from "../footer/footer";
+import Footer from "../Footer/footer";
 
 export default function Layout({ children }) {
   const websiteTitle = "Squaddeck - Sports Club Management Software";

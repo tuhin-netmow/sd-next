@@ -5,20 +5,20 @@ import {
   DropdownMenu,
   DropdownToggle,
 } from "reactstrap";
-import { createSelector } from "reselect";
-import { useSelector } from "react-redux";
+// import { createSelector } from "reselect";
+// import { useSelector } from "react-redux";
 
 //import images
 import avatar1 from "../../../public/assets/images/users/avatar-1.jpg";
 import Link from "next/link";
 
 const ProfileDropdown = () => {
-  const profiledropdownData = createSelector(
-    (state) => state.Profile.user,
-    (user) => user
-  );
+  // const profiledropdownData = createSelector(
+  //   (state) => state.Profile.user,
+  //   (user) => user
+  // );
   // Inside your component
-  const user = useSelector(profiledropdownData);
+  // const user = useSelector(profiledropdownData);
 
   const [userName, setUserName] = useState("Admin");
 
@@ -37,7 +37,7 @@ const ProfileDropdown = () => {
           : "Admin"
       );
     }
-  }, [userName, user]);
+  }, [userName]);
 
   //Dropdown Toggle
   const [isProfileDropdown, setIsProfileDropdown] = useState(false);
@@ -72,7 +72,7 @@ const ProfileDropdown = () => {
           <h6 className="dropdown-header">Welcome {userName}!</h6>
           <DropdownItem className="p-0">
             <Link
-              to={process.env.PUBLIC_URL + "/profile"}
+              href={process.env.PUBLIC_URL + "/profile"}
               className="dropdown-item"
             >
               <i className="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i>
@@ -81,7 +81,7 @@ const ProfileDropdown = () => {
           </DropdownItem>
           <DropdownItem className="p-0">
             <Link
-              to={process.env.PUBLIC_URL + "/apps-chat"}
+              href={process.env.PUBLIC_URL + "/apps-chat"}
               className="dropdown-item"
             >
               <i className="mdi mdi-message-text-outline text-muted fs-16 align-middle me-1"></i>{" "}
@@ -89,14 +89,14 @@ const ProfileDropdown = () => {
             </Link>
           </DropdownItem>
           <DropdownItem className="p-0">
-            <Link to={"#"} className="dropdown-item">
+            <Link href={"#"} className="dropdown-item">
               <i className="mdi mdi-calendar-check-outline text-muted fs-16 align-middle me-1"></i>{" "}
               <span className="align-middle">Taskboard</span>
             </Link>
           </DropdownItem>
           <DropdownItem className="p-0">
             <Link
-              to={process.env.PUBLIC_URL + "/pages-faqs"}
+              href={process.env.PUBLIC_URL + "/pages-faqs"}
               className="dropdown-item"
             >
               <i className="mdi mdi-lifebuoy text-muted fs-16 align-middle me-1"></i>{" "}
@@ -106,7 +106,7 @@ const ProfileDropdown = () => {
           <div className="dropdown-divider"></div>
           <DropdownItem className="p-0">
             <Link
-              to={process.env.PUBLIC_URL + "/pages-profile"}
+              href={process.env.PUBLIC_URL + "/pages-profile"}
               className="dropdown-item"
             >
               <i className="mdi mdi-wallet text-muted fs-16 align-middle me-1"></i>{" "}
@@ -117,7 +117,7 @@ const ProfileDropdown = () => {
           </DropdownItem>
           <DropdownItem className="p-0">
             <Link
-              to={process.env.PUBLIC_URL + "/pages-profile-settings"}
+              href={process.env.PUBLIC_URL + "/pages-profile-settings"}
               className="dropdown-item"
             >
               <span className="badge bg-success-subtle text-success mt-1 float-end">
@@ -129,7 +129,7 @@ const ProfileDropdown = () => {
           </DropdownItem>
           <DropdownItem className="p-0">
             <Link
-              to={process.env.PUBLIC_URL + "/auth-lockscreen-basic"}
+              href={process.env.PUBLIC_URL + "/auth-lockscreen-basic"}
               className="dropdown-item"
             >
               <i className="mdi mdi-lock text-muted fs-16 align-middle me-1"></i>{" "}
@@ -138,7 +138,7 @@ const ProfileDropdown = () => {
           </DropdownItem>
           <DropdownItem className="p-0">
             <Link
-              to={process.env.PUBLIC_URL + "/logout"}
+              href={process.env.PUBLIC_URL + "/logout"}
               className="dropdown-item"
             >
               <i className="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>{" "}
