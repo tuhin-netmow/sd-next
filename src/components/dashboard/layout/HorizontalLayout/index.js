@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import { Col, Collapse, Row } from "reactstrap";
-import withRouter from "../../Components/Common/withRouter";
+import withRouter from "../../common/withRoutes";
 
 // Import Data
 import navdata from "../LayoutMenuData";
 //i18n
 import { withTranslation } from "react-i18next";
+import Link from "next/link";
 
 const HorizontalLayout = (props) => {
   const [isMoreMenu, setIsMoreMenu] = useState(false);

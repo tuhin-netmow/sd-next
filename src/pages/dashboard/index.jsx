@@ -9,6 +9,8 @@ import RecentOrders from "../../components/dashboard/home/RecentOrders";
 import Section from "../../components/dashboard/home/Section";
 import StoreVisits from "../../components/dashboard/home/StoreVisits";
 import TopSellers from "../../components/dashboard/home/TopSellers";
+import DashboardLayout from '../../components/dashboard/layout/index'
+
 
 const DashboardEcommerce = () => {
   // document.title = "Dashboard | Velzon - React Admin & Dashboard Template";
@@ -19,7 +21,7 @@ const DashboardEcommerce = () => {
   };
 
   return (
-    <React.Fragment>
+    <DashboardLayout>
       <div className="page-content">
         <Container fluid>
           <Row>
@@ -46,7 +48,7 @@ const DashboardEcommerce = () => {
           </Row>
         </Container>
       </div>
-    </React.Fragment>
+    </DashboardLayout>
   );
 };
 

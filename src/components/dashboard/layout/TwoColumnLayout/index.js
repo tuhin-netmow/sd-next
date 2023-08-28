@@ -1,10 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Collapse, Container } from "reactstrap";
-import withRouter from "../../Components/Common/withRouter";
+import withRouter from "../../common/withRoutes";
 
-import logoSm from "../../assets/images/logo-sm.png";
+import logoSm from "../../../../../public/assets/images/logo-sm.png";
 //i18n
 import { withTranslation } from "react-i18next";
 
@@ -14,6 +13,7 @@ import VerticalLayout from "../VerticalLayouts";
 
 //SimpleBar
 import SimpleBar from "simplebar-react";
+import Link from "next/link";
 
 const TwoColumnLayout = (props) => {
   const navData = navdata().props.children;

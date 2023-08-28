@@ -1,7 +1,8 @@
 import React from "react";
 import { Card, CardBody, CardHeader, Col } from "reactstrap";
-import { recentOrders } from "../../../utils/common/data";
 import Link from "next/link";
+import Image from "next/image";
+import { recentOrders } from "@/utils/common/data";
 
 const RecentOrders = () => {
   return (
@@ -11,7 +12,7 @@ const RecentOrders = () => {
           <CardHeader className="align-items-center d-flex">
             <h4 className="card-title mb-0 flex-grow-1">Recent Orders</h4>
             <div className="flex-shrink-0">
-              <button type="button" className="btn btn-soft-info btn-sm">
+              <button type="button" className="btn btn-soft-secondary btn-sm">
                 <i className="ri-file-list-3-line align-middle"></i> Generate
                 Report
               </button>
@@ -38,7 +39,7 @@ const RecentOrders = () => {
                       <td>
                         <Link
                           href="/apps-ecommerce-order-details"
-                          className="fw-medium link-primary"
+                          className="fw-medium text-reset"
                         >
                           {item.orderId}
                         </Link>
@@ -46,7 +47,7 @@ const RecentOrders = () => {
                       <td>
                         <div className="d-flex align-items-center">
                           <div className="flex-shrink-0 me-2">
-                            <img
+                            <Image
                               src={item.img}
                               alt=""
                               className="avatar-xs rounded-circle"
@@ -57,7 +58,7 @@ const RecentOrders = () => {
                       </td>
                       <td>{item.product}</td>
                       <td>
-                        <span className="text-success">${item.amount}.00</span>
+                        <span className="text-primary">${item.amount}.00</span>
                       </td>
                       <td>{item.vendor}</td>
                       <td>

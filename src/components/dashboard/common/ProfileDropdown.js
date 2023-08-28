@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import {
   Dropdown,
   DropdownItem,
   DropdownMenu,
   DropdownToggle,
 } from "reactstrap";
-import { createSelector } from "reselect";
-import { useSelector } from "react-redux";
+// import { createSelector } from "reselect";
+// import { useSelector } from "react-redux";
 
 //import images
-import avatar1 from "../../assets/images/users/avatar-1.jpg";
+import avatar1 from "../../../../public/assets/images/users/avatar-1.jpg";
+import Link from "next/link";
 
 const ProfileDropdown = () => {
-  const profiledropdownData = createSelector(
-    (state) => state.Profile.user,
-    (user) => user
-  );
+  // const profiledropdownData = createSelector(
+  //   (state) => state.Profile.user,
+  //   (user) => user
+  // );
   // Inside your component
-  const user = useSelector(profiledropdownData);
+  // const user = useSelector(profiledropdownData);
 
   const [userName, setUserName] = useState("Admin");
 
@@ -37,7 +37,7 @@ const ProfileDropdown = () => {
           : "Admin"
       );
     }
-  }, [userName, user]);
+  }, [userName]);
 
   //Dropdown Toggle
   const [isProfileDropdown, setIsProfileDropdown] = useState(false);

@@ -9,35 +9,32 @@ import {
   DropdownToggle,
   UncontrolledDropdown,
 } from "reactstrap";
-import { bestSellingProducts } from "../../../utils/common/data";
 import Link from "next/link";
+import Image from "next/image";
+import { topSellers } from "@/utils/common/data";
 
-const BestSellingProducts = () => {
+const TopSellers = () => {
   return (
     <React.Fragment>
       <Col xl={6}>
-        <Card>
+        <Card className="card-height-100">
           <CardHeader className="align-items-center d-flex">
-            <h4 className="card-title mb-0 flex-grow-1">
-              Best Selling Products
-            </h4>
+            <h4 className="card-title mb-0 flex-grow-1">Top Sellers</h4>
             <div className="flex-shrink-0">
               <UncontrolledDropdown className="card-header-dropdown">
-                <DropdownToggle tag="a" className="text-reset" role="button">
-                  <span className="fw-semibold text-uppercase fs-12">
-                    Sort by:{" "}
-                  </span>
+                <DropdownToggle
+                  tag="a"
+                  className="text-reset dropdown-btn"
+                  role="button"
+                >
                   <span className="text-muted">
-                    Today<i className="mdi mdi-chevron-down ms-1"></i>
+                    Report<i className="mdi mdi-chevron-down ms-1"></i>
                   </span>
                 </DropdownToggle>
-                <DropdownMenu className="dropdown-menu-end">
-                  <DropdownItem>Today</DropdownItem>
-                  <DropdownItem>Yesterday</DropdownItem>
-                  <DropdownItem>Last 7 Days</DropdownItem>
-                  <DropdownItem>Last 30 Days</DropdownItem>
-                  <DropdownItem>This Month</DropdownItem>
-                  <DropdownItem>Last Month</DropdownItem>
+                <DropdownMenu className="dropdown-menu dropdown-menu-end" end>
+                  <DropdownItem>Download Report</DropdownItem>
+                  <DropdownItem>Export</DropdownItem>
+                  <DropdownItem>Import</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </div>
@@ -45,64 +42,53 @@ const BestSellingProducts = () => {
 
           <CardBody>
             <div className="table-responsive table-card">
-              <table className="table table-hover table-centered align-middle table-nowrap mb-0">
+              <table className="table table-centered table-hover align-middle table-nowrap mb-0">
                 <tbody>
-                  {(bestSellingProducts || []).map((item, key) => (
+                  {topSellers.map((item, key) => (
                     <tr key={key}>
                       <td>
                         <div className="d-flex align-items-center">
-                          <div className="avatar-sm bg-light rounded p-1 me-2">
-                            <img
+                          <div className="flex-shrink-0 me-2">
+                            <Image
                               src={item.img}
                               alt=""
-                              className="img-fluid d-block"
+                              className="avatar-sm p-2"
                             />
                           </div>
                           <div>
-                            <h5 className="fs-14 my-1">
+                            <h5 className="fs-14 my-1 fw-medium">
                               <Link
-                                href="/apps-ecommerce-product-details"
+                                href="/apps-ecommerce-seller-details"
                                 className="text-reset"
                               >
                                 {item.label}
                               </Link>
                             </h5>
-                            <span className="text-muted">{item.date}</span>
+                            <span className="text-muted">{item.name}</span>
                           </div>
                         </div>
                       </td>
                       <td>
-                        <h5 className="fs-14 my-1 fw-normal">
-                          ${item.price.toFixed(2)}
-                        </h5>
-                        <span className="text-muted">Price</span>
+                        <span className="text-muted">{item.product}</span>
                       </td>
                       <td>
-                        <h5 className="fs-14 my-1 fw-normal">{item.orders}</h5>
-                        <span className="text-muted">Orders</span>
-                      </td>
-                      <td>
-                        <h5 className="fs-14 my-1 fw-normal">
-                          {item.stock ? (
-                            item.stock
-                          ) : (
-                            <span className="badge bg-danger-subtle  text-danger">
-                              Out of stock
-                            </span>
-                          )}{" "}
-                        </h5>
+                        <p className="mb-0">{item.stock}</p>
                         <span className="text-muted">Stock</span>
                       </td>
                       <td>
-                        <h5 className="fs-14 my-1 fw-normal">${item.amount}</h5>
-                        <span className="text-muted">Amount</span>
+                        <span className="text-muted">${item.amount}</span>
+                      </td>
+                      <td>
+                        <h5 className="fs-14 mb-0">
+                          {item.percentage}%
+                          <i className="ri-bar-chart-fill text-success fs-16 align-middle ms-2"></i>
+                        </h5>
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-
             <div className="align-items-center mt-4 pt-2 justify-content-between row text-center text-sm-start">
               <div className="col-sm">
                 <div className="text-muted">
@@ -147,4 +133,4 @@ const BestSellingProducts = () => {
   );
 };
 
-export default BestSellingProducts;
+export default TopSellers;

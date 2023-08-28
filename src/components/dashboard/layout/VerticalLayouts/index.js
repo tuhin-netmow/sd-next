@@ -1,18 +1,18 @@
 import React, { useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import { Collapse } from "reactstrap";
 // Import Data
 import navdata from "../LayoutMenuData";
 //i18n
 import { withTranslation } from "react-i18next";
-import withRouter from "../../Components/Common/withRouter";
 import { useSelector } from "react-redux";
 import { createSelector } from "reselect";
+import Link from "next/link";
+import withRouter from "../../common/withRoutes";
 
 const VerticalLayout = (props) => {
   const navData = navdata().props.children;
-  const path = props.router.location.pathname;
+  // const path = props.router.location.pathname;
 
   /*
  layout settings
@@ -99,7 +99,7 @@ const VerticalLayout = (props) => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     const initMenu = () => {
-      const pathName = process.env.PUBLIC_URL + path;
+      const pathName = process.env.PUBLIC_URL;
       const ul = document.getElementById("navbar-nav");
       const items = ul.getElementsByTagName("a");
       let itemsArray = [...items]; // converts NodeList to Array
@@ -114,7 +114,7 @@ const VerticalLayout = (props) => {
     if (props.layoutType === "vertical") {
       initMenu();
     }
-  }, [path, props.layoutType]);
+  }, [props.layoutType]);
 
   function activateParentDropdown(item) {
     item.classList.add("active");

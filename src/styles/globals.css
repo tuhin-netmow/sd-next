@@ -9,14 +9,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
+/* html {
   position: relative;
   overflow-x: hidden;
   font-size: 10px;
   margin: 0;
   height: 100%;
-}
-body {
+} */
+/* body {
   position: relative;
   font-family: "Poppins", sans-serif !important;
   font-size: 1.5rem;
@@ -24,7 +24,7 @@ body {
   color: #3b3b5f;
   font-weight: 500;
   overflow-x: hidden;
-}
+} */
 @media only screen and (min-width: 2112px) {
   html {
     font-size: 10px;
@@ -183,11 +183,11 @@ h6 {
   font-size: 1.5rem;
   line-height: 2.5rem;
 }
-.container {
+/* .container {
   max-width: 105rem;
   margin: 0 auto;
   padding: 0 1.5rem;
-}
+} */
 @media only screen and (max-width: 1150px) {
   [data-scroll] {
     transform: none !important;

@@ -1,6 +1,6 @@
 import { useParams } from "next/navigation";
 
-function withRouter(Component) {
+function withRoutes(Component) {
   function ComponentWithRouterProp(props) {
     // let location = useLocation();
     // let navigate = useNavigate();
@@ -11,4 +11,4 @@ function withRouter(Component) {
   return ComponentWithRouterProp;
 }
 
-export default withRouter;
+export default withRoutes;

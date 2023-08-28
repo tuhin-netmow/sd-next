@@ -2,7 +2,7 @@ import React from "react";
 import CountUp from "react-countup";
 import { Card, CardBody, Col } from "reactstrap";
 import Link from "next/link";
-import { ecomWidgets } from "@/common/data";
+import { ecomWidgets } from "@/utils/common/data";
 
 const Widgets = () => {
   return (

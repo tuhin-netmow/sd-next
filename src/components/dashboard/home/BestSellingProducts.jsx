@@ -11,7 +11,8 @@ import {
 } from "reactstrap";
 import Link from "next/link";
 import Image from "next/image";
-import { bestSellingProducts } from "@/common/data";
+import { bestSellingProducts } from "@/utils/common/data";
+// import { bestSellingProducts } from "@/common/data";
 
 const BestSellingProducts = () => {
   return (

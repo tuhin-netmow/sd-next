@@ -1,25 +1,26 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { Dropdown, DropdownMenu, DropdownToggle, Form } from "reactstrap";
 
 //import images
-import logoSm from "../assets/images/logo-sm.png";
-import logoDark from "../assets/images/logo-dark.png";
-import logoLight from "../assets/images/logo-light.png";
+import logoSm from "../../../../public/assets/images/logo-sm.png";
+import logoDark from "../../../../public/assets/images/logo-dark.png";
+import logoLight from "../../../../public/assets/images/logo-light.png";
 
 //import Components
-import SearchOption from "../Components/Common/SearchOption";
-import LanguageDropdown from "../Components/Common/LanguageDropdown";
-import WebAppsDropdown from "../Components/Common/WebAppsDropdown";
-import MyCartDropdown from "../Components/Common/MyCartDropdown";
-import FullScreenDropdown from "../Components/Common/FullScreenDropdown";
-import NotificationDropdown from "../Components/Common/NotificationDropdown";
-import ProfileDropdown from "../Components/Common/ProfileDropdown";
-import LightDark from "../Components/Common/LightDark";
+import SearchOption from "../common/SearchOption";
+import LanguageDropdown from "../common/LanguageDropdown";
+import WebAppsDropdown from "../common/WebAppsDropdown";
+import MyCartDropdown from "../common/MyCartDropdown";
+import FullScreenDropdown from "../common/FullScreenDropdown";
+import LightDark from "../common/LightDark";
+import NotificationDropdown from "../common/NotificationDropdown";
+import ProfileDropdown from "../common/ProfileDropdown";
 
-import { changeSidebarVisibility } from "../slices/thunks";
 import { useSelector, useDispatch } from "react-redux";
 import { createSelector } from "reselect";
+import Link from "next/link";
+import Image from "next/image";
+import { changeSidebarVisibility } from "@/slices/thunks";
 
 const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
   const dispatch = useDispatch();
@@ -50,7 +51,7 @@ const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
         : document.body.classList.add("menu");
     }
 
-    //For collapse vertical and semibox menu
+    //For collapse vertical menu
     if (
       sidebarVisibilitytype === "show" &&
       (document.documentElement.getAttribute("data-layout") === "vertical" ||
@@ -79,7 +80,6 @@ const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
         : document.body.classList.add("twocolumn-panel");
     }
   };
-
   return (
     <React.Fragment>
       <header id="page-topbar" className={headerClass}>
@@ -89,19 +89,19 @@ const Header = ({ onChangeLayoutMode, layoutModeType, headerClass }) => {
               <div className="navbar-brand-box horizontal-logo">
                 <Link href="/" className="logo logo-dark">
                   <span className="logo-sm">
-                    <img src={logoSm} alt="" height="22" />
+                    <Image src={logoSm} alt="" height="22" />
                   </span>
                   <span className="logo-lg">
-                    <img src={logoDark} alt="" height="17" />
+                    <Image src={logoDark} alt="" height="17" />
                   </span>
                 </Link>
 
                 <Link href="/" className="logo logo-light">
                   <span className="logo-sm">
-                    <img src={logoSm} alt="" height="22" />
+                    <Image src={logoSm} alt="" height="22" />
                   </span>
                   <span className="logo-lg">
-                    <img src={logoLight} alt="" height="17" />
+                    <Image src={logoLight} alt="" height="17" />
                   </span>
                 </Link>
               </div>

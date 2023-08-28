@@ -1,8 +1,8 @@
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const Navdata = () => {
-    const history = useNavigate();
+    const history = useRouter();
     //state data
     const [isDashboard, setIsDashboard] = useState(false);
     const [isApps, setIsApps] = useState(false);
@@ -111,7 +111,7 @@ const Navdata = () => {
             setIsMultiLevel(false);
         }
         if (iscurrentState === 'Widgets') {
-            history("/widgets");
+            history.push("/widgets");
             document.body.classList.add('twocolumn-panel');
         }
         if (iscurrentState !== 'Landing') {
