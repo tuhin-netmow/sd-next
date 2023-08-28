@@ -1,4 +1,4 @@
-// "use client";
+// ;
 import getChartColorsArray from "@/components/Common/ChartsDynamicColor";
 import React from "react";
 import ReactApexChart from "react-apexcharts";

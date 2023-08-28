@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import { Col, Container, Row } from "reactstrap";
 import DashboardLayout from "@/Layouts/index";

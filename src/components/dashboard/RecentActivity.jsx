@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client";
 import React from "react";
 import { Card, CardBody, Row } from "reactstrap";
 
