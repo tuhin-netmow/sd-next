@@ -20,34 +20,36 @@ const DashboardEcommerce = () => {
   };
 
   return (
-    <DashboardLayout>
-      <div className="page-content">
-        <Container fluid>
-          <Row>
-            <Col>
-              <div className="h-100">
-                <Section rightClickBtn={toggleRightColumn} />
-                <Row>
-                  <Widget />
-                </Row>
-                <Row>
-                  <BestSellingProducts />
-                  <TopSellers />
-                </Row>
-                <Row>
-                  <StoreVisits />
-                  <RecentOrders />
-                </Row>
-              </div>
-            </Col>
-            {/* <RecentActivity
+    <>
+      <DashboardLayout>
+        <div className="page-content">
+          <Container fluid>
+            <Row>
+              <Col>
+                <div className="h-100">
+                  <Section rightClickBtn={toggleRightColumn} />
+                  <Row>
+                    <Widget />
+                  </Row>
+                  <Row>
+                    <BestSellingProducts />
+                    <TopSellers />
+                  </Row>
+                  <Row>
+                    <StoreVisits />
+                    <RecentOrders />
+                  </Row>
+                </div>
+              </Col>
+              {/* <RecentActivity
               rightColumn={rightColumn}
               hideRightColumn={toggleRightColumn}
             /> */}
-          </Row>
-        </Container>
-      </div>
-    </DashboardLayout>
+            </Row>
+          </Container>
+        </div>
+      </DashboardLayout>
+    </>
   );
 };
 

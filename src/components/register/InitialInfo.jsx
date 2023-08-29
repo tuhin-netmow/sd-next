@@ -85,7 +85,7 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
           <div className="mt-4">
             <form className="needs-validation">
               <div className="mb-3">
-                <label htmlFor="useremail" className="form-label fs-2 pb-2">
+                <label htmlFor="useremail" className="form-label fs-2 mb-1">
                   Email <span className="text-danger ">*</span>
                 </label>
                 <input
@@ -102,7 +102,7 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
 
               <div className="mb-3">
                 <label
-                  className="form-label fs-2 mb-2"
+                  className="form-label fs-2 mb-1"
                   htmlFor="password-input"
                 >
                   Password
@@ -139,14 +139,14 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
               </div>
               <div className="mb-3">
                 <label
-                  className="form-label fs-2 mb-2"
+                  className="form-label fs-2 mb-1"
                   htmlFor="password-input"
                 >
                   Confirm Password
                 </label>
-                <div className="position-relative auth-pass-inputgroup">
+                <div className="position-relative auth-pass-inputgroup pb-2">
                   <input
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                     type={passwordShow ? "text" : "password"}
                     className="form-control password-input fs-3 p-3 mb-2"
                     onPaste={(e) => e.preventDefault()}
@@ -169,12 +169,13 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
                       }`}
                     ></i>
                   </button>
-                  {passwordError && (
-                    <span className="text-danger fs-3">{passwordError}</span>
+                  {confirmPasswordError && (
+                    <span className="text-danger fs-3">
+                      {confirmPasswordError}
+                    </span>
                   )}
                 </div>
               </div>
-              
 
               <div className="mt-3">
                 <button

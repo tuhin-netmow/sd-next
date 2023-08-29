@@ -42,7 +42,7 @@ const Login = () => {
     }
 
     // window.location.assign("http://abcd.localhost:3001/dashboard");
-    event.target.reset();
+    // event.target.reset();
     // console.log(res);
   };
 
