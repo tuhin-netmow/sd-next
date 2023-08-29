@@ -73,11 +73,11 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
 
   return (
     <>
-      <div className="col-lg-6 fs-4 p-4">
+      <div className="col-lg-6 p-4">
         <div className="p-lg-5">
           <div>
-            <h5 className="fs-2 fw-bold">Register Account</h5>
-            <p className="text-muted fs-5">
+            <h5 className="fs-1 fw-bold">Register Account</h5>
+            <p className="text-muted fs-3">
               Get your Free SquadDeck account now.
             </p>
           </div>
@@ -85,30 +85,33 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
           <div className="mt-4">
             <form className="needs-validation">
               <div className="mb-3">
-                <label htmlFor="useremail" className="form-label">
+                <label htmlFor="useremail" className="form-label fs-2 pb-2">
                   Email <span className="text-danger ">*</span>
                 </label>
                 <input
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
-                  className="form-control fs-4 mb-2"
+                  className="form-control fs-3 p-3 mb-2"
                   placeholder="Enter email address"
                   required
                 />
                 {emailError && (
-                  <span className="text-danger">{emailError}</span>
+                  <span className="text-danger fs-3">{emailError}</span>
                 )}
               </div>
 
               <div className="mb-3">
-                <label className="form-label" htmlFor="password-input">
+                <label
+                  className="form-label fs-2 mb-2"
+                  htmlFor="password-input"
+                >
                   Password
                 </label>
                 <div className="position-relative auth-pass-inputgroup">
                   <input
                     onChange={(e) => setPassword(e.target.value)}
                     type={passwordShow ? "text" : "password"}
-                    className="form-control pe-5 password-input mb-2 fs-4"
+                    className="form-control password-input fs-3 p-3 mb-2"
                     onPaste={(e) => e.preventDefault()}
                     placeholder="Enter password"
                     aria-describedby="passwordInput"
@@ -116,7 +119,7 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
                     required
                   />
                   <button
-                    className="position-absolute end-0 top-0 text-decoration-none text-muted password-addon px-3"
+                    className="position-absolute end-0 top-0 pt-3 fs-2 text-decoration-none text-muted password-addon p-3"
                     type="button"
                     onClick={() => setPasswordShow(!passwordShow)}
                     style={{ backgroundColor: "transparent" }}
@@ -130,19 +133,22 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
                     ></i>
                   </button>
                   {passwordError && (
-                    <span className="text-danger">{passwordError}</span>
+                    <span className="text-danger fs-3">{passwordError}</span>
                   )}
                 </div>
               </div>
               <div className="mb-3">
-                <label className="form-label" htmlFor="password-input">
+                <label
+                  className="form-label fs-2 mb-2"
+                  htmlFor="password-input"
+                >
                   Confirm Password
                 </label>
-                <div className="position-relative auth-pass-inputgroup pb-4">
+                <div className="position-relative auth-pass-inputgroup">
                   <input
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                    type="password"
-                    className="form-control pe-5 password-input mb-2 fs-4"
+                    onChange={(e) => setPassword(e.target.value)}
+                    type={passwordShow ? "text" : "password"}
+                    className="form-control password-input fs-3 p-3 mb-2"
                     onPaste={(e) => e.preventDefault()}
                     placeholder="Enter password"
                     aria-describedby="passwordInput"
@@ -150,10 +156,10 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
                     required
                   />
                   <button
-                    className="position-absolute end-0 top-0 text-decoration-none text-muted px-3"
+                    className="position-absolute end-0 top-0 pt-3 fs-2 text-decoration-none text-muted password-addon p-3"
                     type="button"
-                    style={{ backgroundColor: "transparent" }}
                     onClick={() => setPasswordShow(!passwordShow)}
+                    style={{ backgroundColor: "transparent" }}
                   >
                     <i
                       className={`${
@@ -163,16 +169,17 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
                       }`}
                     ></i>
                   </button>
-                  {confirmPasswordError && (
-                    <span className="text-danger">{confirmPasswordError}</span>
+                  {passwordError && (
+                    <span className="text-danger fs-3">{passwordError}</span>
                   )}
                 </div>
               </div>
+              
 
-              <div className="mt-4">
+              <div className="mt-3">
                 <button
                   onClick={handleStepsAndData}
-                  className={`${styles.button} btn btn-success w-100 fs-4`}
+                  className={`${styles.button} btn text-light w-100 fs-2`}
                 >
                   Register
                 </button>

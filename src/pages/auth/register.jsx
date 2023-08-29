@@ -55,7 +55,7 @@ const Register = () => {
                           <div className="mt-auto">
                             <div className="mb-3">
                               <i
-                                className={`ri-double-quotes-l display-1 ${styles.text_primary}`}
+                                className={`ri-double-quotes-l display-1 ${styles.qoute_color}`}
                               ></i>
                             </div>
 
@@ -88,19 +88,19 @@ const Register = () => {
                               </div>
                               <div className="carousel-inner text-center text-white-50 pb-5">
                                 <div className="carousel-item active">
-                                  <p className="fs-4 fst-italic">
+                                  <p className="fs-2 fst-italic">
                                     " Great! Clean code, clean design, easy for
                                     customization. Thanks very much! "
                                   </p>
                                 </div>
                                 <div className="carousel-item">
-                                  <p className="fs-4 fst-italic">
+                                  <p className="fs-2 fst-italic">
                                     " The theme is really great with an amazing
                                     customer support. Thanks very much!"
                                   </p>
                                 </div>
                                 <div className="carousel-item">
-                                  <p className="fs-4 fst-italic">
+                                  <p className="fs-2 fst-italic">
                                     " Great! Clean code, clean design, easy for
                                     customization. Thanks very much! "
                                   </p>
@@ -154,7 +154,7 @@ const Register = () => {
             <div className="row">
               <div className="col-lg-12">
                 <div className="text-center">
-                  <p className="mb-0 fs-5 text-light">
+                  <p className="mb-0 fs-4 text-light">
                     &copy; {new Date().getFullYear()} SquadDeck. Crafted with{" "}
                     <Icon path={mdiHeart} size={1} color="red" /> by NETMOW
                   </p>

@@ -10,6 +10,7 @@ import mainLogo from "../../../public/assets/img/main_logo.png";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordShow, setPasswordShow] = useState(false);
 
   const navigate = useRouter();
 
@@ -48,14 +49,14 @@ const Login = () => {
   return (
     <>
       {/* <!-- auth-page wrapper --> */}
-      <div className="auth-page-wrapper auth-bg-cover py-5 d-flex justify-content-center align-items-center min-vh-100">
-        <div className="bg-overlay"></div>
+      <div className="auth-page-wrapper auth-bg-cover pt-5 pb-2 d-flex justify-content-center align-items-center min-vh-100">
+        <div className="bg-overlay "></div>
         {/* <!-- auth-page content --> */}
-        <div className="auth-page-content overflow-hidden ">
-          <div className="container ">
-            <div className="row">
-              <div className="col-lg-12 fs-4 ">
-                <div className="card overflow-hidden y-5">
+        <div className="auth-page-content overflow-hidden pt-lg-5 ">
+          <div className="container pt-3">
+            <div className="row pt-1">
+              <div className="col-lg-12 fs-2 ">
+                <div className="card overflow-hidden border-0">
                   <div className="row justify-content-center g-0">
                     <div className="col-lg-6">
                       <div className="p-lg-5 p-4 auth-one-bg h-100">
@@ -68,7 +69,7 @@ const Login = () => {
                           </div>
                           <div className="mt-auto">
                             <div className="mb-3">
-                              <i className="ri-double-quotes-l display-4 quote-color"></i>
+                              <i className="ri-double-quotes-l display-1 qoute_color"></i>
                             </div>
 
                             <div
@@ -129,8 +130,8 @@ const Login = () => {
                     <div className="col-lg-6">
                       <div className="p-lg-5 p-4">
                         <div>
-                          <h5 className="quote-color fs-2">Welcome Back !</h5>
-                          <p className="text-muted">
+                          <h5 className=" fs-1 fw-bold">Welcome Back !</h5>
+                          <p className="text-muted fs-3">
                             Sign in to continue to SquadDeck.
                           </p>
                         </div>
@@ -138,20 +139,22 @@ const Login = () => {
                         <div className="mt-4">
                           <form onSubmit={handleSubmit}>
                             <div className="mb-3 pb-3">
-                              <label htmlFor="username" className="form-label">
+                              <label
+                                htmlFor="username"
+                                className="form-label pb-2"
+                              >
                                 User Email
                               </label>
                               <input
                                 onChange={(e) => setEmail(e.target.value)}
                                 type="email"
                                 name="umail"
-                                className="form-control fs-4"
+                                className="form-control fs-3 p-3"
                                 id="username"
                                 placeholder="Enter Your Email"
                               />
                             </div>
-
-                            <div className="mb-3 ">
+                            <div className="mb-3">
                               <div className="float-end ">
                                 <Link
                                   href=""
@@ -161,31 +164,40 @@ const Login = () => {
                                 </Link>
                               </div>
                               <label
-                                className="form-label"
+                                className="form-label fs-2 mb-2"
                                 htmlFor="password-input"
                               >
                                 Password
                               </label>
-                              <div className="position-relative auth-pass-inputgroup pb-3">
+                              <div className="position-relative auth-pass-inputgroup">
                                 <input
                                   onChange={(e) => setPassword(e.target.value)}
-                                  type="password"
-                                  name="pass"
-                                  className="form-control fs-4 password-input"
-                                  placeholder="Enter Password"
-                                  id="password-input"
+                                  type={passwordShow ? "text" : "password"}
+                                  className="form-control password-input fs-3 p-3 mb-2"
+                                  onPaste={(e) => e.preventDefault()}
+                                  placeholder="Enter password"
+                                  aria-describedby="passwordInput"
+                                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                  required
                                 />
-
                                 <button
-                                  className="btn btn-link position-absolute pb-4 end-0 top-0 text-decoration-none text-muted"
+                                  className="position-absolute end-0 top-0 pt-3 fs-2 text-decoration-none text-muted password-addon p-3"
                                   type="button"
+                                  onClick={() => setPasswordShow(!passwordShow)}
+                                  style={{ backgroundColor: "transparent" }}
                                 >
-                                  <i className="ri-eye-fill align-middle "></i>
+                                  <i
+                                    className={`${
+                                      passwordShow
+                                        ? "ri-eye-off-line align-middle"
+                                        : "ri-eye-fill align-middle"
+                                    }`}
+                                  ></i>
                                 </button>
                               </div>
                             </div>
 
-                            <div className="form-check">
+                            <div className="form-check py-2">
                               <input
                                 className="form-check-input"
                                 type="checkbox"
@@ -204,48 +216,13 @@ const Login = () => {
                               <input
                                 type="submit"
                                 value="Sign In"
-                                className="btn btn-success w-100 fs-4"
+                                className="btn button text-light w-100 fs-2"
                               />
                             </div>
-
-                            {/* <div className="mt-4 text-center">
-                              <div className="signin-other-title">
-                                <h5 className="fs-13 mb-4 title">
-                                  Sign In with
-                                </h5>
-                              </div>
-
-                              <div className="social-icons">
-                                <button
-                                  type="button"
-                                  className="btn btn-primary btn-icon waves-effect waves-light "
-                                >
-                                  <i className="ri-facebook-fill fs-16"></i>
-                                </button>
-                                <button
-                                  type="button"
-                                  className="btn btn-danger btn-icon waves-effect waves-light"
-                                >
-                                  <i className="ri-google-fill fs-16"></i>
-                                </button>
-                                <button
-                                  type="button"
-                                  className="btn btn-dark btn-icon waves-effect waves-light"
-                                >
-                                  <i className="ri-github-fill fs-16"></i>
-                                </button>
-                                <button
-                                  type="button"
-                                  className="btn btn-info btn-icon waves-effect waves-light"
-                                >
-                                  <i className="ri-twitter-fill fs-16"></i>
-                                </button>
-                              </div>
-                            </div> */}
                           </form>
                         </div>
 
-                        <div className="mt-5 fs-3 text-center">
+                        <div className="mt-5 fs-2 text-center">
                           <p className="mb-0">
                             Don't have an account ?{" "}
                             <Link
@@ -271,12 +248,12 @@ const Login = () => {
           </div>
 
           {/* <!-- footer --> */}
-          <footer className="footer">
+          <footer className="footer text-light">
             <div className="container">
               <div className="row">
                 <div className="col-lg-12">
                   <div className="text-center">
-                    <p className="mb-0 fs-2">
+                    <p className="mb-0 fs-4">
                       &copy; {new Date().getFullYear()} SquadDeck. Crafted with{" "}
                       <i className="mdi mdi-heart text-danger"></i> by Netmow
                     </p>

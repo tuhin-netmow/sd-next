@@ -10,6 +10,19 @@
 // @import "../scss/rtl/plugins-rtl";
 // @import "../scss/rtl/pages-rtl";
 
+.button {
+  background-color: var(--color--primary);
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+}
+.button:hover {
+  background-color: var(--color--secondary);
+}
+.qoute_color {
+  color: var(--color--primary);
+}
+
+
 //Rigthsidebar offcanvas
 .offcanvas-header-dark {
   .btn-close {
