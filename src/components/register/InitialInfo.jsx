@@ -9,6 +9,8 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
   const [passwordError, setPasswordError] = useState("");
   const [confirmPasswordError, setConfirmPasswordError] = useState("");
   const [passwordShow, setPasswordShow] = useState(false);
+  const [confirmPasswordShow, setConfirmPasswordShow] = useState(false);
+
 
 
   const handleStepsAndData = async () => {
@@ -137,7 +139,7 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
                 <div className="position-relative auth-pass-inputgroup pb-4">
                   <input
                     onChange={(e) => setConfirmPassword(e.target.value)}
-                    type="password"
+                    type={confirmPasswordShow ? "text" : "password"}
                     className="form-control pe-5 password-input mb-2 fs-4"
                     onPaste={(e) => e.preventDefault()}
                     placeholder="Enter password"
@@ -149,9 +151,9 @@ const InitialInfo = ({ setStep, step, setUserInfo, userInfo }) => {
                     className="position-absolute end-0 top-0 text-decoration-none text-muted px-3"
                     type="button"
                     style={{backgroundColor: "transparent"}}
-                    onClick={() => setPasswordShow(!passwordShow)} 
+                    onClick={() => setConfirmPasswordShow(!confirmPasswordShow)} 
                   >
-                    <i className={`${passwordShow ? "ri-eye-off-line align-middle" : "ri-eye-fill align-middle"}`}></i>
+                    <i className={`${confirmPasswordShow ? "ri-eye-off-line align-middle" : "ri-eye-fill align-middle"}`}></i>
                   </button>
                   {confirmPasswordError && (
                     <span className="text-danger">{confirmPasswordError}</span>
