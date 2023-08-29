@@ -1,13 +1,56 @@
-import React from 'react';
+import React, { useState } from "react";
+import { Col, Container, Row } from "reactstrap";
+import Widget from "../../components/dashboard/home/Widgets";
+import BestSellingProducts from "../../components/dashboard/home/BestSellingProducts";
+// import RecentActivity from "../../components/dashboard/home/RecentActivity";
+import RecentOrders from "../../components/dashboard/home/RecentOrders";
+// import Revenue from "../../components/dashboard/home/Revenue";
+// import SalesByLocations from "../../components/dashboard/home/SalesByLocations";
+import Section from "../../components/dashboard/home/Section";
+import StoreVisits from "../../components/dashboard/home/StoreVisits";
+import TopSellers from "../../components/dashboard/home/TopSellers";
+import DashboardLayout from "../../components/dashboard/layout/index";
 
-const dashboard = () => {
-    return (
-        <div>
-            <h1>
-                This is dashboard 
-            </h1>
+const DashboardEcommerce = () => {
+  // document.title = "Dashboard | Velzon - React Admin & Dashboard Template";
+
+  const [rightColumn, setRightColumn] = useState(true);
+  const toggleRightColumn = () => {
+    setRightColumn(!rightColumn);
+  };
+
+  return (
+    <>
+      <DashboardLayout>
+        <div className="page-content">
+          <Container fluid>
+            <Row>
+              <Col>
+                <div className="h-100">
+                  <Section rightClickBtn={toggleRightColumn} />
+                  <Row>
+                    <Widget />
+                  </Row>
+                  <Row>
+                    <BestSellingProducts />
+                    <TopSellers />
+                  </Row>
+                  <Row>
+                    <StoreVisits />
+                    <RecentOrders />
+                  </Row>
+                </div>
+              </Col>
+              {/* <RecentActivity
+              rightColumn={rightColumn}
+              hideRightColumn={toggleRightColumn}
+            /> */}
+            </Row>
+          </Container>
         </div>
-    );
+      </DashboardLayout>
+    </>
+  );
 };
 
-export default dashboard;
+export default DashboardEcommerce;

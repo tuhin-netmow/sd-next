@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --color--primary: #9344e8;
   --color--secondary: #162a73;
@@ -9,14 +9,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
+/* html {
   position: relative;
   overflow-x: hidden;
   font-size: 10px;
   margin: 0;
   height: 100%;
-}
-body {
+} */
+/* body {
   position: relative;
   font-family: "Poppins", sans-serif !important;
   font-size: 1.5rem;
@@ -24,7 +24,7 @@ body {
   color: #3b3b5f;
   font-weight: 500;
   overflow-x: hidden;
-}
+} */
 @media only screen and (min-width: 2112px) {
   html {
     font-size: 10px;
@@ -183,11 +183,11 @@ h6 {
   font-size: 1.5rem;
   line-height: 2.5rem;
 }
-.container {
-  max-width: 117rem;
+/* .container {
+  max-width: 105rem;
   margin: 0 auto;
   padding: 0 1.5rem;
-}
+} */
 @media only screen and (max-width: 1150px) {
   [data-scroll] {
     transform: none !important;
@@ -4454,13 +4454,13 @@ a.scrolltop-btn {
   border-radius: 0 10rem 0 0;
 }
 
-.main-content {
+/* .main-content {
   width: calc(100% - 73.6rem);
   padding-block: 8.6rem;
   padding-inline: 1.5rem;
   position: relative;
   z-index: 9;
-}
+} */
 
 .signup_wrap .main-content {
   padding-block: 2rem;

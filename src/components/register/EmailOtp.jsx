@@ -1,13 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client";
 import React, { createRef, useState } from "react";
-
 
 const EmailOtp = ({ step, setStep, userEmail }) => {
   const [otp, setOtp] = useState(["", "", "", ""]);
-  const inputRefs = [0, 1, 2, 3].map(() =>
-    createRef()
-  );
+  const inputRefs = [0, 1, 2, 3].map(() => createRef());
 
   const handleInputChange = (event) => {
     const value = event.target.value;
@@ -19,9 +15,7 @@ const EmailOtp = ({ step, setStep, userEmail }) => {
         return newOtp;
       });
       if (index < inputRefs.length - 1) {
-        const nextInputRef = inputRefs[
-          index + 1
-       ];
+        const nextInputRef = inputRefs[index + 1];
         if (nextInputRef && "current" in nextInputRef && nextInputRef.current) {
           nextInputRef.current.focus();
         }
@@ -41,9 +35,7 @@ const EmailOtp = ({ step, setStep, userEmail }) => {
         newOtp[index] = "";
         setOtp(newOtp);
 
-        const prevInputRef = inputRefs[
-          index - 1
-        ];
+        const prevInputRef = inputRefs[index - 1];
         if (prevInputRef.current) {
           prevInputRef.current.focus();
         }

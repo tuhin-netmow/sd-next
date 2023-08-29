@@ -9,9 +9,9 @@ import InitialInfo from "../../components/register/InitialInfo";
 import EmailDone from "../../components/register/EmailDone";
 import EmailOtp from "../../components/register/EmailOtp";
 import mainLogo from "../../../public/assets/img/main_logo.png";
-import styles from './register.module.css';
-import Icon from '@mdi/react';
-import { mdiHeart } from '@mdi/js';
+import styles from "./register.module.css";
+import Icon from "@mdi/react";
+import { mdiHeart } from "@mdi/js";
 
 const Register = () => {
   const [step, setStep] = useState(1);
@@ -25,12 +25,14 @@ const Register = () => {
     password: "",
     confrim_password: "",
   });
-  
+
   //console.log("u ", userInfo);
   return (
     <>
       {/* <!-- auth-page wrapper --> */}
-      <div className={`${styles.auth_page_wrapper} ${styles.auth_bg_cover} d-flex flex-column justify-content-center align-items-center min-vh-100 pt-5 pb-2`}>
+      <div
+        className={`${styles.auth_page_wrapper} ${styles.auth_bg_cover} d-flex flex-column justify-content-center align-items-center min-vh-100 pt-5 pb-2`}
+      >
         <div className={styles.bg_overlay}></div>
         {/* <!-- auth-page content --> */}
         <div className={`${styles.auth_page_content} overflow-hidden pt-lg-5`}>
@@ -40,7 +42,9 @@ const Register = () => {
                 <div className="card overflow-hidden border-0">
                   <div className="row justify-content-center g-0">
                     <div className="col-lg-6">
-                      <div className={`p-lg-5 p-4 position-relative ${styles.auth_one_bg} h-100`}>
+                      <div
+                        className={`p-lg-5 p-4 position-relative ${styles.auth_one_bg} h-100`}
+                      >
                         <div className={styles.card_overlay}></div>
                         <div className="position-relative h-100 d-flex flex-column">
                           <div className="mb-4">
@@ -50,7 +54,9 @@ const Register = () => {
                           </div>
                           <div className="mt-auto">
                             <div className="mb-3">
-                              <i className={`ri-double-quotes-l display-1 ${styles.text_primary}`}></i>
+                              <i
+                                className={`ri-double-quotes-l display-1 ${styles.qoute_color}`}
+                              ></i>
                             </div>
 
                             <div
@@ -82,19 +88,19 @@ const Register = () => {
                               </div>
                               <div className="carousel-inner text-center text-white-50 pb-5">
                                 <div className="carousel-item active">
-                                  <p className="fs-4 fst-italic">
+                                  <p className="fs-2 fst-italic">
                                     " Great! Clean code, clean design, easy for
                                     customization. Thanks very much! "
                                   </p>
                                 </div>
                                 <div className="carousel-item">
-                                  <p className="fs-4 fst-italic">
+                                  <p className="fs-2 fst-italic">
                                     " The theme is really great with an amazing
                                     customer support. Thanks very much!"
                                   </p>
                                 </div>
                                 <div className="carousel-item">
-                                  <p className="fs-4 fst-italic">
+                                  <p className="fs-2 fst-italic">
                                     " Great! Clean code, clean design, easy for
                                     customization. Thanks very much! "
                                   </p>
@@ -148,9 +154,9 @@ const Register = () => {
             <div className="row">
               <div className="col-lg-12">
                 <div className="text-center">
-                  <p className="mb-0 fs-5 text-light">
+                  <p className="mb-0 fs-4 text-light">
                     &copy; {new Date().getFullYear()} SquadDeck. Crafted with{" "}
-                    <Icon path={mdiHeart} size={1} color="red"/> by NETMOW
+                    <Icon path={mdiHeart} size={1} color="red" /> by NETMOW
                   </p>
                 </div>
               </div>
